@@ -35,11 +35,13 @@ public class CabinController {
     }
 
     @PutMapping("/update")
+    @ResponseStatus(HttpStatus.OK)
     public Cabin update(@RequestBody Cabin b){
         return cabinService.update(b);
     }
 
     @DeleteMapping("/{id}")
+    @ResponseStatus(HttpStatus.NO_CONTENT)
     public boolean delete(@PathVariable("id") int id){
         return cabinService.delete(id);
     }

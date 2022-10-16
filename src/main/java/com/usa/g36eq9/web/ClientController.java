@@ -35,11 +35,13 @@ public class ClientController {
     }
 
     @PutMapping("/update")
+    @ResponseStatus(HttpStatus.OK)
     public Client update(@RequestBody Client c){
         return clientService.update(c);
     }
 
     @DeleteMapping("/{id}")
+    @ResponseStatus(HttpStatus.NO_CONTENT)
     public boolean delete(@PathVariable("id") int idClient){
         return clientService.delete(idClient);
     }
