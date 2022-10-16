@@ -42,9 +42,7 @@ public class CabinService {
                 if(b.getBrand() != null){
                     q.get().setBrand(b.getBrand());
                 }
-                if(b.getYear() != null){
-                    q.get().setYear(b.getYear());
-                }
+
                 if(b.getDescription() != null){
                     q.get().setDescription(b.getDescription());
                 }
